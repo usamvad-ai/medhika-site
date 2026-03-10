@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medhika — Practice Smarter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Medhika</h1>
+      <nav class="nav">
+        <a href="#hero">Home</a>
+        <a href="#flashcards">Flashcards</a>
+        <a href="#quizzes">Quizzes</a>
+        <a href="#worksheets">Worksheets</a>
+        <a href="#notes">Notes</a>
+        <a href="#parent">Parent</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero container">
+      <div class="hero-left">
+        <h2>Medhika — Sharpen Memory. Ace Exams.</h2>
+        <p>Short daily drills, spaced‑repetition flashcards, and adaptive quizzes for Classes 3–9.</p>
+        <div class="cta-row">
+          <button id="start-quiz" class="btn primary">Start Diagnostic</button>
+          <button id="start-flash" class="btn">Try Flashcards</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="progress-card">
+          <h3>Weekly Recall Streak</h3>
+          <div class="progress-ring" data-progress="40"></div>
+          <p id="streak-text">No streak yet — start today!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="flashcards" class="container module">
+      <h3>Flashcards (Spaced Repetition)</h3>
+      <div class="flashcard-area">
+        <div id="card" class="flashcard front">Click to reveal</div>
+        <div class="card-controls">
+          <button id="wrong" class="btn">Again</button>
+          <button id="good" class="btn primary">Got it</button>
+        </div>
+      </div>
+      <div class="deck-controls">
+        <select id="deck-select">
+          <option value="math">Class 5 Math — Tables</option>
+          <option value="science">Class 6 Science — Plants</option>
+        </select>
+        <button id="reset-deck" class="btn">Reset Deck</button>
+      </div>
+    </section>
+
+    <section id="quizzes" class="container module">
+      <h3>Adaptive Micro‑Quiz</h3>
+      <div id="quiz-area" class="quiz-area">
+        <div id="question">Press Start to begin a 5‑question adaptive quiz.</div>
+        <div id="answers" class="answers"></div>
+        <div class="quiz-controls">
+          <button id="quiz-start" class="btn primary">Start Quiz</button>
+          <div id="quiz-feedback" class="feedback"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="worksheets" class="container module">
+      <h3>Worksheets & Digital Escape Rooms</h3>
+      <p>Upload PDFs to your GitHub repo and link them here. Example embedded viewer:</p>
+      <iframe id="worksheet-frame" src="https://example.com/sample-worksheet.pdf" title="Worksheet" class="pdf-frame"></iframe>
+    </section>
+
+    <section id="notes" class="container module">
+      <h3>Note Crafting — Build Your Knowledge World</h3>
+      <textarea id="note-input" placeholder="Type a summary or highlight..."></textarea>
+      <div class="note-actions">
+        <button id="save-note" class="btn primary">Save Note</button>
+        <button id="build-world" class="btn">Build World</button>
+      </div>
+      <div id="world" class="world"></div>
+    </section>
+
+    <section id="parent" class="container module">
+      <h3>Parent Dashboard (Preview)</h3>
+      <div id="parent-stats" class="parent-stats">
+        <div>Student: <strong>Aarav</strong></div>
+        <div>Weekly XP: <strong id="xp">0</strong></div>
+        <div>Weak Topics: <strong id="weak">—</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Medhika — Practice Smarter</small>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
